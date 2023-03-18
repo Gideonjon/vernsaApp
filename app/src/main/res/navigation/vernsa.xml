@@ -11,10 +11,19 @@
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
+            android:id="@+id/action_splashScreen_to_viewpager2"
+            app:destination="@id/viewpager2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
             android:id="@+id/action_splashScreen_to_landingPage"
             app:destination="@id/landingPage"
-            app:enterAnim="@android:anim/slide_out_right"
-            app:exitAnim="@android:anim/slide_in_left" />
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginPage"
@@ -85,5 +94,18 @@
             app:destination="@id/personalAccount"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewpager2"
+        android:name="com.example.vernsa.onboarding.viewpager"
+        android:label="fragment_viewpager"
+        tools:layout="@layout/fragment_viewpager" >
+        <action
+            android:id="@+id/action_viewpager2_to_landingPage"
+            app:destination="@id/landingPage"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/viewpager2"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

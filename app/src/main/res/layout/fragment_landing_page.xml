@@ -20,7 +20,7 @@
             android:layout_width="550dp"
             android:layout_height="410dp"
             android:layout_marginHorizontal="22dp"
-            android:src="@drawable/vernabout"
+            android:src="@drawable/vernsamobile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@color/backg"
+            android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
-                            android:text="Send And Recieve Money From Anyone from Anywhere Using Different Method"
+                            android:text="Send And Recieve Money From Anyone \n from Anywhere Using Different Method"
                             android:textAlignment="center"
                             android:textColor="@color/enable"
                             android:layout_marginHorizontal="12dp"
