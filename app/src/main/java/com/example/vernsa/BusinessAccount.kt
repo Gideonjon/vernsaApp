@@ -1,59 +1,66 @@
 package com.example.vernsa
 
 import android.os.Bundle
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.example.vernsa.databinding.FragmentBusinessAccountBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BusinessAccount.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BusinessAccount : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding: FragmentBusinessAccountBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_business_account, container, false)
+
+        _binding = FragmentBusinessAccountBinding.inflate(inflater,container,false)
+        val view = binding.root
+
+        binding.create.setOnClickListener {
+
+            if (binding.businessnameEt.text.toString().isEmpty()) {
+                binding.businessName.error = "Field Empty"
+                binding.businessName.requestFocus()
+            }
+            if (binding.firstNameEt.text.toString().isEmpty()) {
+                binding.firstname.error = "Field Empty"
+                binding.firstname.requestFocus()
+            }
+            if (binding.lastnameEt.text.toString().isEmpty()) {
+                binding.lastname.error = "Field Empty"
+                binding.lastname.requestFocus()
+            }
+            if (!Patterns.PHONE.matcher(binding.phonenumberEt.text.toString()).matches()) {
+                binding.phonenumber.error = "Correct Phone Number"
+                binding.phonenumber.requestFocus()
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(binding.websiteEt.text.toString()).matches()) {
+                binding.website.error = "Correct Website"
+                binding.website.requestFocus()
+            }
+            if (binding.usernameEt.text.toString().isEmpty()) {
+                binding.userName.error = "Field Empty"
+                binding.userName.requestFocus()
+            }
+            if (binding.pswEt.text.toString().isEmpty()) {
+                binding.psw.error = "Field Empty"
+                binding.psw.requestFocus()
+            }
+            if (!Patterns.WEB_URL.matcher(binding.websiteEt.text.toString()).matches()) {
+                binding.website.error = "Field Empty"
+                binding.website.requestFocus()
+            }else{
+                Toast.makeText(requireContext(), "Wha khee has registered You", Toast.LENGTH_SHORT).show()
+            }
+            
+        }
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BusinessAccount.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BusinessAccount().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:icon="@drawable/ic_baseline_pages_24"
+            android:title="Services"/>
+
+
+    <item
+        android:icon="@drawable/ic_baseline_stacked_bar_chart_24"
+        android:title="Stocks"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_keyboard_double_arrow_up_24"
+        android:title="Investment"/>
+
+    <item
+        android:icon="@drawable/ic_sharp_people_alt_24"
+        android:title="Search"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Search"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Search"/>
+
+</menu>
