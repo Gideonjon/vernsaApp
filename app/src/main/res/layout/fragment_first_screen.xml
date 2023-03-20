@@ -9,7 +9,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".screens.FirstScreen">
 
@@ -18,7 +17,7 @@
         android:id="@+id/image"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/vernseed"
+        android:src="@drawable/photo_send"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="100dp"
@@ -29,13 +28,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:fontFamily="casual"
         android:text="Send, Recieve and make withdrawals anywhere in the world.\n Recieve
 foreign payment and make global sales as business \n  and lot more"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/testing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image" />
 

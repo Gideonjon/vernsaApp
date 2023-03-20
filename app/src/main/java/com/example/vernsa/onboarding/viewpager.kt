@@ -13,7 +13,7 @@ import com.example.vernsa.screens.ThirdScreen
 
 
 class viewpager : Fragment() {
-private var _binding : FragmentViewpagerBinding? = null
+    private var _binding: FragmentViewpagerBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,19 +21,28 @@ private var _binding : FragmentViewpagerBinding? = null
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-     _binding = FragmentViewpagerBinding.inflate(inflater,container,false)
-     val view = binding.root
+        _binding = FragmentViewpagerBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        val fragmentList = arrayListOf<Fragment>(
-FirstScreen(),
+
+        var fragmentList = arrayListOf<Fragment>(
+            FirstScreen(),
             SecondScreen(),
             ThirdScreen()
         )
+        val springDotsIndicator = binding.dotsIndicator
+        val viewpager = binding.viewpager
+        val adapter2 =
+            viewpagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
+        viewpager.adapter = adapter2
+        springDotsIndicator.attachTo(viewpager)
 
-        val adapter = viewpagerAdapter(fragmentList,
-requireActivity().supportFragmentManager, lifecycle
-            )
+        val adapter = viewpagerAdapter(
+            fragmentList,
+            requireActivity().supportFragmentManager, lifecycle
+        )
         binding.viewpager.adapter = adapter
+
         return view
     }
 
