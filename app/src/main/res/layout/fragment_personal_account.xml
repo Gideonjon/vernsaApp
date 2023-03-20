@@ -32,6 +32,7 @@
             android:layout_marginTop="14dp"
             android:text="Create Your Personal Account"
             android:textColor="@color/black"
+            android:fontFamily="@font/testing"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
+            android:fontFamily="@font/testing"
             android:text="First Name"
             android:textColor="@color/black"
             android:textSize="17sp"
@@ -66,7 +68,6 @@
                 android:id="@+id/businessname_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/testing"
             android:text="Last Name"
             android:textColor="@color/black"
             android:textSize="17sp"
@@ -98,7 +100,6 @@
                 android:id="@+id/firstName_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -109,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Email Address"
+            android:fontFamily="@font/testing"
             android:textColor="@color/black"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="@id/firstname"
@@ -133,7 +135,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="email"
-                android:background="@drawable/card"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -167,7 +168,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="phone"
-                android:background="@drawable/card"
                 android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -179,6 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Password"
+            android:fontFamily="@font/testing"
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -200,7 +201,6 @@
                 android:id="@+id/password_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -232,7 +232,6 @@
                 android:id="@+id/username_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>

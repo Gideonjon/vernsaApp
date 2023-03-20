@@ -27,7 +27,7 @@ class LandingPage : Fragment() {
         }
 
         binding.createAccount.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_landingPage_to_selectionFragment)
+         Navigation.findNavController(view).navigate(R.id.action_landingPage_to_personalAccount)
         }
 
         return view

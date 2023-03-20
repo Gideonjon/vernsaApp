@@ -28,30 +28,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Send, Recieve and make withdrawals anywhere in the world.\n Recieve
+        android:text="Send, Recieve and make withdrawals anywhere in the world. \n Recieve
 foreign payment and make global sales as business \n  and lot more"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/testing"
+        android:lineSpacingExtra="7dp"
+        android:fontFamily="@font/okay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="22dp"
-        android:background="@drawable/onboarding"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Continue"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt"
-        tools:layout_editor_absoluteX="22dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

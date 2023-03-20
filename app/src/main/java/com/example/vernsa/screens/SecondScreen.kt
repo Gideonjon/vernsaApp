@@ -23,12 +23,6 @@ class SecondScreen : Fragment() {
         _binding = FragmentSecondScreenBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val viewpager = activity?.findViewById<ViewPager2>(R.id.viewpager)
-
-        binding.btnContinue.setOnClickListener {
-
-            viewpager?.currentItem = 2
-        }
 
         return view
     }

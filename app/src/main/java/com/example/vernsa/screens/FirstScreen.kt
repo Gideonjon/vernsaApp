@@ -24,12 +24,7 @@ class FirstScreen : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentFirstScreenBinding.inflate(inflater, container, false)
         val view = binding.root
-        val viewpager = activity?.findViewById<ViewPager2>(R.id.viewpager)
 
-        binding.btnContinue.setOnClickListener {
-
-            viewpager?.currentItem = 1
-        }
 
 
         return view
