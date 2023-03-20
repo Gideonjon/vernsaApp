@@ -9,7 +9,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
         tools:context=".LoginPage">
 
         <!-- TODO: Update blank fragment layout -->
@@ -41,7 +40,7 @@
             android:fontFamily="sans-serif-condensed-light"
             android:text="Login Into Your Account"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="Email address"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/email"
@@ -88,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
             android:text="Password"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/email"
@@ -102,7 +101,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="7dp"
             app:endIconMode="password_toggle"
-            app:endIconTint="@color/white"
+            app:endIconTint="@color/black"
             app:errorEnabled="true"
             app:errorTextColor="@color/enable"
             app:layout_constraintTop_toBottomOf="@id/gine">
@@ -121,7 +120,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:background="@color/background"
-            android:drawableEnd="@drawable/ic_baseline_person_search_24"
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="@color/white"

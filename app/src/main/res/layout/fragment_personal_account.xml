@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".PersonalAccount">
 
         <!-- TODO: Update blank fragment layout -->
@@ -173,7 +174,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/psw"
+            android:id="@+id/pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -184,26 +185,21 @@
             app:layout_constraintStart_toStartOf="@id/userName"
             app:layout_constraintTop_toBottomOf="@id/userName" />
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="7dp"
-            android:autofillHints="password"
             android:textColorHint="@color/black"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
-            app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@id/psw">
+            app:layout_constraintTop_toBottomOf="@id/pass">
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/psw_et"
+                android:id="@+id/password_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints="password"
                 android:background="@drawable/card"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -245,12 +241,12 @@
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:buttonTint="@color/enable"
             android:checked="true"
             android:text="I have read. understand and agree to  Vernsa's"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:layout_marginTop="4dp"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/phonenumber"
@@ -260,14 +256,13 @@
             android:id="@+id/terms_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terms And Conditions"
-            app:layout_constraintTop_toBottomOf="@id/checkBox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="3dp"
+            android:text="Terms And Conditions"
             android:textColor="@color/gone"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/lastname"
+            app:layout_constraintTop_toBottomOf="@id/checkBox" />
 
 
         <TextView
@@ -288,29 +283,31 @@
             android:id="@+id/data_policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
             android:text="Data Policy Privacy"
-            app:layout_constraintTop_toBottomOf="@id/as"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/gone"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/as"
+            app:layout_constraintStart_toEndOf="@id/as"
+            app:layout_constraintTop_toBottomOf="@id/checkBox"
+            app:layout_constraintTop_toTopOf="@id/as" />
 
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
             android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="22dp"
             android:background="@color/background"
             android:text="Create Account"
             android:textAllCaps="false"
             android:textColor="@color/purple_200"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/data_policy" />
+            app:layout_constraintTop_toBottomOf="@id/as" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
