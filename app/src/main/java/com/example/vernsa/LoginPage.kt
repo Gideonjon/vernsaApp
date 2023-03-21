@@ -1,5 +1,6 @@
 package com.example.vernsa
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -30,21 +31,22 @@ class LoginPage : Fragment() {
 
 
         binding.login.setOnClickListener {
-            if (binding.pswEt.text.toString().isEmpty()){
+            if (binding.pswEt.text.toString().isEmpty()) {
                 binding.password.error = "Password Field Required"
                 binding.password.requestFocus()
             }
-            if (binding.emailEt.text.toString().isEmpty()){
+            if (binding.emailEt.text.toString().isEmpty()) {
                 binding.email.error = "Email Field Required"
                 binding.email.requestFocus()
             }
-            if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()){
+            if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
                 Toast.makeText(requireContext(), "Enter A Valid Email Address", Toast.LENGTH_SHORT)
                     .show()
-            }else{
+            } else {
+                val intent = Intent(requireContext(), MainScreen::class.java)
+                activity?.startActivity(intent)
 
             }
-
 
 
         }

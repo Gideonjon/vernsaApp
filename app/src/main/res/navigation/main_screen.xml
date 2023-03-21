@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_screen"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.vernsa.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/stocks"
+        android:name="com.example.vernsa.Stocks"
+        android:label="fragment_stocks"
+        tools:layout="@layout/fragment_stocks" />
+    <fragment
+        android:id="@+id/investment"
+        android:name="com.example.vernsa.Investment"
+        android:label="fragment_investment"
+        tools:layout="@layout/fragment_investment" />
+    <fragment
+        android:id="@+id/me"
+        android:name="com.example.vernsa.Me"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me" />
+</navigation>
