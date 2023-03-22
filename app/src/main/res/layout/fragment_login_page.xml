@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:fitsSystemWindows="true"
     android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -60,7 +61,6 @@
             app:layout_constraintStart_toStartOf="@id/email"
             app:layout_constraintTop_toBottomOf="@id/txt" />
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,17 +68,19 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="7dp"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidthFocused="12dp"
             app:errorEnabled="true"
             app:errorTextColor="@color/enable"
             app:layout_constraintTop_toBottomOf="@id/lop">
 
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_et"
                 android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <TextView
             android:id="@+id/gine"
@@ -113,12 +115,13 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:background="@color/background"
             android:text="Login"
             android:textAllCaps="false"
+            android:layout_marginHorizontal="22dp"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"

@@ -35,13 +35,8 @@ class LoginPage : Fragment() {
                 binding.password.error = "Password Field Required"
                 binding.password.requestFocus()
             }
-            if (binding.emailEt.text.toString().isEmpty()) {
-                binding.email.error = "Email Field Required"
-                binding.email.requestFocus()
-            }
             if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
-                Toast.makeText(requireContext(), "Enter A Valid Email Address", Toast.LENGTH_SHORT)
-                    .show()
+               binding.email.error = "Enter A Valid Email"
             } else {
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
