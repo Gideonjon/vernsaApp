@@ -15,10 +15,7 @@
         android:icon="@drawable/ic_baseline_stacked_bar_chart_24"
         android:title="Stocks" />
 
-    <item
-        android:id="@+id/investment"
-        android:icon="@drawable/ic_baseline_keyboard_double_arrow_up_24"
-        android:title="Investment" />
+
 
 
     <item

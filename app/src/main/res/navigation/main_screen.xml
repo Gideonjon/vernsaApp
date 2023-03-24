@@ -9,20 +9,33 @@
         android:id="@+id/dashboard"
         android:name="com.example.vernsa.Dashboard"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_fundAccount"
+            app:destination="@id/fundAccount" />
+    </fragment>
     <fragment
         android:id="@+id/stocks"
         android:name="com.example.vernsa.Stocks"
         android:label="fragment_stocks"
         tools:layout="@layout/fragment_stocks" />
-    <fragment
-        android:id="@+id/investment"
-        android:name="com.example.vernsa.Investment"
-        android:label="fragment_investment"
-        tools:layout="@layout/fragment_investment" />
+
     <fragment
         android:id="@+id/me"
         android:name="com.example.vernsa.Me"
         android:label="fragment_me"
         tools:layout="@layout/fragment_me" />
+    <fragment
+        android:id="@+id/fundAccount"
+        android:name="com.example.vernsa.FundAccount"
+        android:label="fragment_fund_account"
+        tools:layout="@layout/fragment_fund_account" >
+        <action
+            android:id="@+id/action_fundAccount_to_dashboard"
+            app:destination="@id/dashboard" />
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="5000" />
+    </fragment>
 </navigation>

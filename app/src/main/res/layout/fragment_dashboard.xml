@@ -27,8 +27,8 @@
         android:text="Good Morning"
         android:textColor="@color/enable"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@id/photo"
         app:layout_constraintBottom_toBottomOf="@id/photo"
+        app:layout_constraintStart_toEndOf="@id/photo"
         app:layout_constraintTop_toTopOf="@id/photo" />
 
     <ImageView
@@ -95,6 +95,8 @@
 
 
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -125,8 +127,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:fontFamily="@font/spacegrotesk_semibold"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/testing"
         android:text="Verifying your account makes your gain unlimited\n access to transaction and money capabilities"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/images"
