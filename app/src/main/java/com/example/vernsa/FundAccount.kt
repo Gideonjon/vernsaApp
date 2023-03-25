@@ -1,59 +1,105 @@
 package com.example.vernsa
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.Navigation
+import com.example.vernsa.databinding.FragmentDashboardBinding
+import com.example.vernsa.databinding.FragmentFundAccountBinding
+import com.flutterwave.raveandroid.RaveConstants
+import com.flutterwave.raveandroid.RavePayActivity
+import com.flutterwave.raveandroid.RavePayManager
+import java.util.UUID
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FundAccount.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FundAccount : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentFundAccountBinding? = null
+    private val binding get() = _binding!!
+    private var publicKey = "FLWPUBK_TEST-42e6dfe2e63c701924823774fd06c145-X"
+    private var encryptionKey = "FLWSECK_TEST-bfb37eeec9f678e0f73652116dad10ec-X"
+    private var amount = 400
+    private var email = "vernsa@gmail.com"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fund_account, container, false)
+
+        _binding = FragmentFundAccountBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        binding.arrrowBack.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_fundAccount_to_dashboard)
+        }
+
+        binding.confirm.setOnClickListener {
+
+            if (binding.vernseedEt.text.toString().isEmpty()) {
+                binding.vernseed.error = "Field Is Empty"
+            }
+            if (binding.vernseedEt.text.toString().toDouble().isNaN()) {
+                Toast.makeText(requireContext(), "If You Dont Have Money Ask", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+
+                makepayment()
+            }
+        }
+
+
+        return view
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FundAccount.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FundAccount().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun makepayment() {
+
+        val tref = email + " " + UUID.randomUUID().toString()
+        RavePayManager(requireActivity())
+            .acceptSaBankPayments(true)
+            .acceptUssdPayments(true)
+            .acceptAccountPayments(true)
+            .allowSaveCardFeature(true)
+            .setEncryptionKey(encryptionKey)
+            .setPublicKey(publicKey)
+            .acceptAccountPayments(true)
+            .acceptCardPayments(true)
+            .setAmount(amount.toDouble())
+            .setEmail(email)
+            .setTxRef(tref)
+            .acceptBarterPayments(true)
+            .setCurrency("N")
+            .setCountry("NGN")
+            .acceptMpesaPayments(true)
+            .shouldDisplayFee(true)
+            .acceptMpesaPayments(true)
+            .acceptSaBankPayments(true)
+            .acceptUssdPayments(true)
+            .onStagingEnv(false)
+            .acceptGHMobileMoneyPayments(false)
+            .withTheme(com.flutterwave.raveandroid.R.style.DefaultTheme)
+            .initialize()
+
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
+            val message = data.getStringExtra("response")
+        }
+        if (resultCode == RavePayActivity.RESULT_SUCCESS) {
+            Toast.makeText(requireActivity(), "Successfull", Toast.LENGTH_SHORT).show()
+        } else if (resultCode == RavePayActivity.RESULT_ERROR) {
+            Toast.makeText(requireActivity(), "Error", Toast.LENGTH_SHORT).show()
+        } else if (resultCode == RavePayActivity.RESULT_CANCELED) {
+            Toast.makeText(requireActivity(), "Cancelled", Toast.LENGTH_SHORT).show()
+        }
+
+
+    }
+
+
 }

@@ -10,12 +10,11 @@
         android:id="@+id/photo"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/me"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="5dp"
-        app:layout_constraintStart_toStartOf="parent"/>
-
+        android:layout_marginTop="32dp"
+        android:src="@drawable/me"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -25,19 +24,20 @@
         android:layout_marginStart="7dp"
         android:fontFamily="@font/okay"
         android:text="Good Morning"
-        android:textColor="@color/enable"
+        android:textColor="@color/gone"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/photo"
         app:layout_constraintStart_toEndOf="@id/photo"
         app:layout_constraintTop_toTopOf="@id/photo" />
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_back_hand_24"
         app:layout_constraintBottom_toBottomOf="@id/txt"
         app:layout_constraintStart_toEndOf="@id/txt"
-        app:layout_constraintTop_toTopOf="@id/txt" />
+        app:layout_constraintTop_toTopOf="@id/txt"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/hand" />
 
     <ImageView
         android:id="@+id/notification"
@@ -55,9 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="52dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/background"
+        android:backgroundTint="@color/enable"
         app:cardCornerRadius="5dp"
-        app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt">
@@ -68,6 +67,21 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="12dp">
 
+
+            <TextView
+                android:id="@+id/wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/okay"
+                android:text="My Wallet"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="25dp"
@@ -76,7 +90,7 @@
                 android:layout_marginTop="14dp"
                 android:src="@drawable/ic_outline_attach_money_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/wallet" />
 
             <TextView
                 android:id="@+id/figure"
@@ -92,46 +106,134 @@
                 app:layout_constraintTop_toTopOf="@id/img" />
 
 
-
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-
     <TextView
-        android:id="@+id/txtet"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:fontFamily="@font/testing"
-        android:text="Verify Account"
-        android:textColor="@color/enable"
+        android:text="Vernsa Services"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@id/bank_card"
+        app:layout_constraintStart_toStartOf="@id/photo"
         app:layout_constraintTop_toBottomOf="@id/bank_card" />
 
     <ImageView
-        android:id="@+id/images"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/money_bag"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/srvices"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
         android:layout_marginTop="22dp"
-        android:background="@drawable/bg_verify"
-        android:padding="10dp"
-        android:src="@drawable/ic_outline_mode_edit_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtet" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="29dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bank_transfer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/bank"/>
 
     <TextView
+        android:id="@+id/impo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:fontFamily="@font/testing"
-        android:text="Verifying your account makes your gain unlimited\n access to transaction and money capabilities"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/images"
-        app:layout_constraintStart_toEndOf="@id/images"
-        app:layout_constraintTop_toTopOf="@id/images" />
+        android:fontFamily="@font/okay"
+        android:text="Add Funds"
+        android:textColor="@color/enable"
+        app:layout_constraintEnd_toEndOf="@id/bank_transfer"
+        app:layout_constraintStart_toStartOf="@id/bank_transfer"
+        app:layout_constraintTop_toBottomOf="@id/bank_transfer" />
+
+    <ImageView
+        android:id="@+id/withdraw"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="42dp"
+        app:layout_constraintTop_toTopOf="@id/bank_transfer"
+        android:src="@drawable/atm_card"
+        app:layout_constraintStart_toEndOf="@id/impo"/>
+
+    <TextView
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Withdraw"
+        app:layout_constraintTop_toBottomOf="@id/withdraw"
+        app:layout_constraintStart_toStartOf="@id/withdraw"
+        app:layout_constraintEnd_toEndOf="@id/withdraw"
+        android:fontFamily="@font/okay"
+        android:textColor="@color/gone"/>
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/send"
+            app:layout_constraintTop_toTopOf="@id/withdraw"
+            app:layout_constraintStart_toEndOf="@id/length"
+            android:layout_marginStart="42dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Funds"
+            app:layout_constraintStart_toStartOf="@id/send"
+            app:layout_constraintEnd_toEndOf="@id/send"
+            app:layout_constraintTop_toBottomOf="@id/send"
+            android:textColor="@color/enable"
+            android:fontFamily="@font/okay"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <TextView
+            android:id="@+id/txtet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/testing"
+            android:text="Verify Account"
+            android:textColor="@color/enable"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/bank_card"
+            app:layout_constraintTop_toBottomOf="@id/srvices" />
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_verify"
+            android:padding="10dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_outline_mode_edit_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/testing"
+            android:text="Verifying your account makes your gain unlimited\n access to transaction and money capabilities"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/images"
+            app:layout_constraintStart_toEndOf="@id/images"
+            app:layout_constraintTop_toTopOf="@id/images" />
 </androidx.constraintlayout.widget.ConstraintLayout>

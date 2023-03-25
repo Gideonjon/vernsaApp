@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_dashboard_to_fundAccount"
-            app:destination="@id/fundAccount" />
+            app:destination="@id/fundAccount"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/stocks"
@@ -31,11 +33,17 @@
         android:label="fragment_fund_account"
         tools:layout="@layout/fragment_fund_account" >
         <action
+            android:id="@+id/action_fundAccount_to_flutterWave2"
+            app:destination="@id/flutterWave" />
+        <action
             android:id="@+id/action_fundAccount_to_dashboard"
-            app:destination="@id/dashboard" />
-        <argument
-            android:name="number"
-            app:argType="integer"
-            android:defaultValue="5000" />
+            app:destination="@id/dashboard"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/flutterWave"
+        android:name="com.example.vernsa.FlutterWave"
+        android:label="fragment_flutter_wave"
+        tools:layout="@layout/fragment_flutter_wave" />
 </navigation>

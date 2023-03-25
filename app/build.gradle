@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.vernsa"
-        minSdk 16
+        minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -49,4 +50,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation "com.tbuonomo:dotsindicator:4.3"
     implementation 'com.github.Flutterwave:rave-android:1.0.49.1'
+    implementation "com.airbnb.android:lottie:5.2.0"
 }
