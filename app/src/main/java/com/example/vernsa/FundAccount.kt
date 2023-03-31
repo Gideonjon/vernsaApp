@@ -57,29 +57,28 @@ class FundAccount : Fragment() {
 
     private fun makepayment() {
 
-        val tref = email + " " + UUID.randomUUID().toString()
         RavePayManager(requireActivity())
-            .acceptSaBankPayments(true)
-            .acceptUssdPayments(true)
-            .acceptAccountPayments(true)
-            .allowSaveCardFeature(true)
-            .setEncryptionKey(encryptionKey)
+            .setEmail(email)
+            .setCountry("NGN")
+            .setCurrency("NGN")
+            .setAmount(Double.NaN)
+            .setfName("Licio")
+            .setlName("Lentimo")
             .setPublicKey(publicKey)
+            .setEncryptionKey(encryptionKey)
+            .setTxRef(System.currentTimeMillis().toString() + "Ref")
             .acceptAccountPayments(true)
             .acceptCardPayments(true)
-            .setAmount(amount.toDouble())
-            .setEmail(email)
-            .setTxRef(tref)
-            .acceptBarterPayments(true)
-            .setCurrency("N")
-            .setCountry("NGN")
             .acceptMpesaPayments(true)
+            .onStagingEnv(true)
             .shouldDisplayFee(true)
+            .showStagingLabel(true)
             .acceptMpesaPayments(true)
             .acceptSaBankPayments(true)
             .acceptUssdPayments(true)
-            .onStagingEnv(false)
-            .acceptGHMobileMoneyPayments(false)
+            .acceptGHMobileMoneyPayments(true)
+            .acceptBankTransferPayments(true)
+            .allowSaveCardFeature(true)
             .withTheme(com.flutterwave.raveandroid.R.style.DefaultTheme)
             .initialize()
 
@@ -91,11 +90,11 @@ class FundAccount : Fragment() {
             val message = data.getStringExtra("response")
         }
         if (resultCode == RavePayActivity.RESULT_SUCCESS) {
-            Toast.makeText(requireActivity(), "Successfull", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Successfull", Toast.LENGTH_SHORT).show()
         } else if (resultCode == RavePayActivity.RESULT_ERROR) {
-            Toast.makeText(requireActivity(), "Error", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
         } else if (resultCode == RavePayActivity.RESULT_CANCELED) {
-            Toast.makeText(requireActivity(), "Cancelled", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Cancelled", Toast.LENGTH_SHORT).show()
         }
 
 

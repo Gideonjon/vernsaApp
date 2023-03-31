@@ -51,4 +51,5 @@ dependencies {
     implementation "com.tbuonomo:dotsindicator:4.3"
     implementation 'com.github.Flutterwave:rave-android:1.0.49.1'
     implementation "com.airbnb.android:lottie:5.2.0"
+    implementation 'com.tradingview:lightweightcharts:3.8.0'
 }
