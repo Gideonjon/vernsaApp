@@ -22,7 +22,7 @@ class Dashboard : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.bankTransfer.setOnClickListener {
+        binding.addFunds.setOnClickListener {
 
             Navigation.findNavController(view).navigate(R.id.action_dashboard_to_fundAccount)
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,6 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@id/photo"
         app:layout_constraintStart_toEndOf="@id/photo"
         app:layout_constraintTop_toTopOf="@id/photo" />
+
 
     <TextView
         android:id="@+id/userName"
@@ -132,29 +134,32 @@
         android:id="@+id/add_funds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-         android:backgroundTint="@color/enable"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="17dp"
+        android:backgroundTint="@color/enable"
+        app:cardCornerRadius="9dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bank_card">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="3dp">
+            android:layout_marginEnd="7dp">
 
             <ImageView
                 android:id="@+id/dirty"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:layout_marginStart="7dp"
                 android:padding="5dp"
-                android:src="@drawable/bank"
+                android:src="@drawable/ic_outline_add_circle_outline_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:fontFamily="@font/okay"
                 android:text="Add Funds"
                 android:textColor="@color/white"
@@ -167,131 +172,96 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/sendFunds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/add_funds"
-        app:layout_constraintTop_toTopOf="@id/add_funds"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/gone"
+        app:cardCornerRadius="9dp"
         app:layout_constraintBottom_toBottomOf="@id/add_funds"
-        android:layout_marginStart="12dp">
+        app:layout_constraintStart_toEndOf="@id/add_funds"
+        app:layout_constraintTop_toTopOf="@id/add_funds">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="7dp">
+
+            <ImageView
+                android:id="@+id/dirt"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="7dp"
+                android:padding="5dp"
+                android:rotation="-40"
+                android:src="@drawable/ic_baseline_send_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/okay"
+                android:text="Send Funds"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/dirt"
+                app:layout_constraintStart_toEndOf="@id/dirt"
+                app:layout_constraintTop_toTopOf="@id/dirt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/sendFunds"
+        app:cardCornerRadius="7dp"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/background"
+        app:layout_constraintStart_toEndOf="@id/sendFunds"
+        app:layout_constraintTop_toTopOf="@id/sendFunds">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="7dp"
             android:layout_height="match_parent">
 
 
+            <ImageView
+                android:id="@+id/dir"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="7dp"
+                android:padding="5dp"
+                android:rotation="-270"
+                android:src="@drawable/ic_baseline_logout_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/okay"
+                android:text="Withdraw"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/dir"
+                app:layout_constraintStart_toEndOf="@id/dir"
+                app:layout_constraintTop_toTopOf="@id/dir" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
     </androidx.cardview.widget.CardView>
 
-    <!--   <TextView
-           android:id="@+id/name"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="22dp"
-           android:fontFamily="@font/testing"
-           android:text="Vernsa Services"
-           android:textColor="@color/black"
-           android:textSize="20sp"
-           app:layout_constraintStart_toStartOf="@id/photo"
-           app:layout_constraintTop_toBottomOf="@id/bank_card" />
 
-       <ImageView
-           android:layout_width="30dp"
-           android:layout_height="30dp"
-           android:layout_marginStart="2dp"
-           android:src="@drawable/money_bag"
-           app:layout_constraintBottom_toBottomOf="@id/name"
-           app:layout_constraintStart_toEndOf="@id/name"
-           app:layout_constraintTop_toTopOf="@id/name" />
-
-       <androidx.constraintlayout.widget.ConstraintLayout
-           android:id="@+id/srvices"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginHorizontal="29dp"
-           android:layout_marginTop="22dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@id/name">
-
-           <ImageView
-               android:id="@+id/bank_transfer"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginStart="22dp"
-               android:layout_marginTop="7dp"
-               android:src="@drawable/bank"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent" />
-
-           <TextView
-               android:id="@+id/impo"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:fontFamily="@font/okay"
-               android:text="Add Funds"
-               android:textColor="@color/enable"
-               app:layout_constraintEnd_toEndOf="@id/bank_transfer"
-               app:layout_constraintStart_toStartOf="@id/bank_transfer"
-               app:layout_constraintTop_toBottomOf="@id/bank_transfer" />
-
-           <ImageView
-               android:id="@+id/withdraw"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginStart="42dp"
-               android:src="@drawable/atm_card"
-               app:layout_constraintStart_toEndOf="@id/impo"
-               app:layout_constraintTop_toTopOf="@id/bank_transfer" />
-
-           <TextView
-               android:id="@+id/length"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:fontFamily="@font/okay"
-               android:text="Withdraw"
-               android:textColor="@color/gone"
-               app:layout_constraintEnd_toEndOf="@id/withdraw"
-               app:layout_constraintStart_toStartOf="@id/withdraw"
-               app:layout_constraintTop_toBottomOf="@id/withdraw" />
-
-           <ImageView
-               android:id="@+id/send"
-               android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:layout_marginStart="42dp"
-               android:src="@drawable/send"
-               app:layout_constraintStart_toEndOf="@id/length"
-               app:layout_constraintTop_toTopOf="@id/withdraw" />
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:fontFamily="@font/okay"
-               android:text="Send Funds"
-               android:textColor="@color/enable"
-               app:layout_constraintEnd_toEndOf="@id/send"
-               app:layout_constraintStart_toStartOf="@id/send"
-               app:layout_constraintTop_toBottomOf="@id/send" />
-
-       </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-    <!--  <TextView
+      <TextView
           android:id="@+id/txtet"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="22dp"
+          app:layout_constraintTop_toBottomOf="@id/add_funds"
           android:fontFamily="@font/testing"
           android:text="Verify Account"
           android:textColor="@color/enable"
@@ -319,5 +289,5 @@
           android:textColor="@color/black"
           app:layout_constraintBottom_toBottomOf="@id/images"
           app:layout_constraintStart_toEndOf="@id/images"
-          app:layout_constraintTop_toTopOf="@id/images" />-->
+          app:layout_constraintTop_toTopOf="@id/images" />
 </androidx.constraintlayout.widget.ConstraintLayout>
