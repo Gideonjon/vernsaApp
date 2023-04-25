@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_screen"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.vernsa.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_fundAccount"
+            app:destination="@id/fundAccount"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/stocks"
+        android:name="com.example.vernsa.Stocks"
+        android:label="fragment_stocks"
+        tools:layout="@layout/fragment_stocks" />
+
+    <fragment
+        android:id="@+id/me"
+        android:name="com.example.vernsa.Me"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me" />
+    <fragment
+        android:id="@+id/fundAccount"
+        android:name="com.example.vernsa.FundAccount"
+        android:label="fragment_fund_account"
+        tools:layout="@layout/fragment_fund_account" >
+        <action
+            android:id="@+id/action_fundAccount_to_flutterWave2"
+            app:destination="@id/flutterWave" />
+        <action
+            android:id="@+id/action_fundAccount_to_dashboard"
+            app:destination="@id/dashboard"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/flutterWave"
+        android:name="com.example.vernsa.FlutterWave"
+        android:label="fragment_flutter_wave"
+        tools:layout="@layout/fragment_flutter_wave" />
+</navigation>

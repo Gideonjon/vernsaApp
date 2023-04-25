@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_flutter_wave.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_flutter_wave.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_landing_page.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_landing_page.xml"
+    },
+    {
+        "merged": "com.example.vernsa.app-mergeDebugResources-50:/layout/fragment_login_page.xml",
+        "source": "com.example.vernsa.app-main-53:/layout/fragment_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_forgot_password.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\activity_main_screen.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_verify_password.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_verify_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_first_screen.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_first_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_third_screen.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_third_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fancy.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fancy.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_login_page.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_personal_account.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_personal_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_fund_account.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_fund_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_second_screen.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_second_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_stocks.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_stocks.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_splash_screen.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_verified.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_verified.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_me.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_me.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-mergeDebugResources-50:\\layout\\fragment_viewpager.xml",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_viewpager.xml"
+    }
+]

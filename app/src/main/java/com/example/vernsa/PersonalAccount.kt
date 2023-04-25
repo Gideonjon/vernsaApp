@@ -24,27 +24,21 @@ class PersonalAccount : Fragment() {
         _binding = FragmentPersonalAccountBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.arrow.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_personalAccount_to_landingPage)
+        binding.loginHere.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_personalAccount_to_loginPage)
         }
 
-        binding.create.setOnClickListener {
+        binding.signup.setOnClickListener {
 
-            if (binding.businessnameEt.text.toString().isEmpty()) {
-                binding.businessName.error = "This Field Cant Be Empty"
-            }
-            if (binding.usernameEt.text.toString().isEmpty()) {
-                binding.userName.error = "This Field Cant Be Empty"
-            }
-            if (binding.passwordEt.text.toString().isEmpty()) {
+            if (binding.pswEt.text.toString().isEmpty()) {
                 binding.password.error = "This Field Cant Be Empty"
             }
-            if (!Patterns.EMAIL_ADDRESS.matcher(binding.lastnameEt.text.toString()).matches()) {
-                binding.lastname.error = "Wrong Email Address"
+            if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
+                binding.email.error = "Wrong Email Address"
             }
-            if (!Patterns.PHONE.matcher(binding.phonenumberEt.text.toString()).matches()) {
-                binding.phonenumber.error = "Invalid Phone Number"
-            } else {
+            if (binding.confirmPswEt.text.toString().isEmpty() == binding.pswEt.text.toString().isEmpty()){
+                binding.confirmPassword.error = "Password Doesn't Match"
+           } else {
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
             }
@@ -52,6 +46,6 @@ class PersonalAccount : Fragment() {
 
         return view
     }
+    }
 
 
-}

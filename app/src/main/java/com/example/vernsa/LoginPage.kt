@@ -25,8 +25,8 @@ class LoginPage : Fragment() {
         _binding = FragmentLoginPageBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.arrowBack.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_landingPage)
+        binding.signupHere.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_personalAccount)
         }
 
 
@@ -44,6 +44,9 @@ class LoginPage : Fragment() {
             }
 
 
+        }
+        binding.forgotPsw.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_forgotPassword)
         }
 
 

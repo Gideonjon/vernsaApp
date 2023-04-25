@@ -13,8 +13,6 @@
         <action
             android:id="@+id/action_splashScreen_to_viewpager2"
             app:destination="@id/viewpager2"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/splashScreen"
             app:popUpToInclusive="true" />
         <action
@@ -35,6 +33,12 @@
             app:destination="@id/landingPage"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginPage_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+        <action
+            android:id="@+id/action_loginPage_to_personalAccount"
+            app:destination="@id/personalAccount" />
     </fragment>
     <fragment
         android:id="@+id/personalAccount"
@@ -48,6 +52,9 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/landingPage"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_personalAccount_to_loginPage"
+            app:destination="@id/loginPage" />
     </fragment>
     <fragment
         android:id="@+id/landingPage"
@@ -78,4 +85,27 @@
             app:popUpTo="@id/viewpager2"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.example.vernsa.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPassword_to_verifyPassword"
+            app:destination="@id/verifyPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyPassword"
+        android:name="com.example.vernsa.VerifyPassword"
+        android:label="fragment_verify_password"
+        tools:layout="@layout/fragment_verify_password" >
+        <action
+            android:id="@+id/action_verifyPassword_to_verified"
+            app:destination="@id/verified" />
+    </fragment>
+    <Dia
+        android:id="@+id/verified"
+        android:name="com.example.vernsa.Verified"
+        android:label="fragment_verified"
+        tools:layout="@layout/fragment_verified" />
 </navigation>

@@ -30,12 +30,10 @@ class viewpager : Fragment() {
             SecondScreen(),
             ThirdScreen()
         )
-        val springDotsIndicator = binding.dotsIndicator
         val viewpager = binding.viewpager
         val adapter2 =
             viewpagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
         viewpager.adapter = adapter2
-        springDotsIndicator.attachTo(viewpager)
 
         val adapter = viewpagerAdapter(
             fragmentList,
