@@ -4,6 +4,7 @@ package com.example.vernsa.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,9 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView arrrowBack;
+
+  @NonNull
   public final TextInputLayout confirmPassword;
 
   @NonNull
@@ -38,10 +42,11 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
   public final TextView form;
 
   private FragmentForgotPasswordBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextInputLayout confirmPassword, @NonNull TextView confirmPsw,
-      @NonNull TextInputEditText confirmPswEt, @NonNull AppCompatButton forget,
-      @NonNull TextView form) {
+      @NonNull ImageView arrrowBack, @NonNull TextInputLayout confirmPassword,
+      @NonNull TextView confirmPsw, @NonNull TextInputEditText confirmPswEt,
+      @NonNull AppCompatButton forget, @NonNull TextView form) {
     this.rootView = rootView;
+    this.arrrowBack = arrrowBack;
     this.confirmPassword = confirmPassword;
     this.confirmPsw = confirmPsw;
     this.confirmPswEt = confirmPswEt;
@@ -76,6 +81,12 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.arrrowBack;
+      ImageView arrrowBack = ViewBindings.findChildViewById(rootView, id);
+      if (arrrowBack == null) {
+        break missingId;
+      }
+
       id = R.id.confirm_password;
       TextInputLayout confirmPassword = ViewBindings.findChildViewById(rootView, id);
       if (confirmPassword == null) {
@@ -106,8 +117,8 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentForgotPasswordBinding((ConstraintLayout) rootView, confirmPassword,
-          confirmPsw, confirmPswEt, forget, form);
+      return new FragmentForgotPasswordBinding((ConstraintLayout) rootView, arrrowBack,
+          confirmPassword, confirmPsw, confirmPswEt, forget, form);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2839,6 +2839,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable btn_stroke
 drawable business
 drawable card
+drawable chart
 drawable collapsed
 drawable combo
 drawable creditcard
@@ -2852,6 +2853,7 @@ drawable dot_background
 drawable eclispe
 drawable flw_icon_coloured
 drawable green_btn_curved
+drawable home
 drawable ic_arrow_back_black_24
 drawable ic_arrow_back_black_24dp
 drawable ic_baseline_account_balance_24
@@ -2922,6 +2924,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable me
 drawable money_bag
+drawable money_change
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -2991,6 +2994,7 @@ drawable test_level_drawable
 drawable text_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trade
 drawable transfer
 drawable transparent
 drawable vernabout
@@ -3000,6 +3004,7 @@ drawable vernsamobile
 drawable vernseed
 drawable verve
 drawable visa_logo_new
+drawable wallet
 drawable worm_dot_background
 drawable worm_dot_stroke_background
 font okay
@@ -3331,6 +3336,7 @@ id login
 id loginPage
 id login_here
 id lop
+id lottie
 id lottie_layer_name
 id ltr
 id m3_side_sheet
@@ -3986,7 +3992,9 @@ mipmap ic_loggo_round
 navigation main_screen
 navigation vernsa
 plurals mtrl_badge_content_description
+raw camp
 raw hand
+raw loading
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

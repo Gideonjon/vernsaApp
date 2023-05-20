@@ -13,8 +13,6 @@
         <action
             android:id="@+id/action_splashScreen_to_viewpager2"
             app:destination="@id/viewpager2"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/splashScreen"
             app:popUpToInclusive="true" />
         <action
@@ -105,7 +103,7 @@
             android:id="@+id/action_verifyPassword_to_verified"
             app:destination="@id/verified" />
     </fragment>
-    <fragment
+    <Dia
         android:id="@+id/verified"
         android:name="com.example.vernsa.Verified"
         android:label="fragment_verified"

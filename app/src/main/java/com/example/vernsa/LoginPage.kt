@@ -38,6 +38,7 @@ class LoginPage : Fragment() {
             if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
                binding.email.error = "Enter A Valid Email"
             } else {
+                binding.lottie.visibility = View.VISIBLE
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
 

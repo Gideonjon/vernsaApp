@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.vernsa.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -48,6 +49,9 @@ public final class FragmentLoginPageBinding implements ViewBinding {
   public final TextView lop;
 
   @NonNull
+  public final LottieAnimationView lottie;
+
+  @NonNull
   public final TextInputLayout password;
 
   @NonNull
@@ -62,8 +66,9 @@ public final class FragmentLoginPageBinding implements ViewBinding {
   private FragmentLoginPageBinding(@NonNull ScrollView rootView, @NonNull TextView already,
       @NonNull TextInputLayout email, @NonNull TextInputEditText emailEt,
       @NonNull TextView forgotPsw, @NonNull TextView gine, @NonNull ImageView img,
-      @NonNull AppCompatButton login, @NonNull TextView lop, @NonNull TextInputLayout password,
-      @NonNull TextInputEditText pswEt, @NonNull TextView signupHere, @NonNull TextView txt) {
+      @NonNull AppCompatButton login, @NonNull TextView lop, @NonNull LottieAnimationView lottie,
+      @NonNull TextInputLayout password, @NonNull TextInputEditText pswEt,
+      @NonNull TextView signupHere, @NonNull TextView txt) {
     this.rootView = rootView;
     this.already = already;
     this.email = email;
@@ -73,6 +78,7 @@ public final class FragmentLoginPageBinding implements ViewBinding {
     this.img = img;
     this.login = login;
     this.lop = lop;
+    this.lottie = lottie;
     this.password = password;
     this.pswEt = pswEt;
     this.signupHere = signupHere;
@@ -154,6 +160,12 @@ public final class FragmentLoginPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lottie;
+      LottieAnimationView lottie = ViewBindings.findChildViewById(rootView, id);
+      if (lottie == null) {
+        break missingId;
+      }
+
       id = R.id.password;
       TextInputLayout password = ViewBindings.findChildViewById(rootView, id);
       if (password == null) {
@@ -179,7 +191,7 @@ public final class FragmentLoginPageBinding implements ViewBinding {
       }
 
       return new FragmentLoginPageBinding((ScrollView) rootView, already, email, emailEt, forgotPsw,
-          gine, img, login, lop, password, pswEt, signupHere, txt);
+          gine, img, login, lop, lottie, password, pswEt, signupHere, txt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

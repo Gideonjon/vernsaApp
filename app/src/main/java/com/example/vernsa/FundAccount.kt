@@ -12,6 +12,7 @@ import com.example.vernsa.databinding.FragmentDashboardBinding
 import com.example.vernsa.databinding.FragmentFundAccountBinding
 import com.flutterwave.raveandroid.RaveConstants
 import com.flutterwave.raveandroid.RavePayActivity
+import com.flutterwave.raveandroid.RavePayInitializer
 import com.flutterwave.raveandroid.RavePayManager
 import java.util.UUID
 
@@ -56,12 +57,13 @@ class FundAccount : Fragment() {
     }
 
     private fun makepayment() {
+        val amount = binding.vernseedEt.text.toString().toDouble()
 
         RavePayManager(requireActivity())
             .setEmail(email)
             .setCountry("NGN")
             .setCurrency("NGN")
-            .setAmount(Double.NaN)
+            .setAmount(amount)
             .setfName("Licio")
             .setlName("Lentimo")
             .setPublicKey(publicKey)

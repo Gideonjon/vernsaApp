@@ -63,8 +63,11 @@
             app:boxCornerRadiusBottomEnd="6dp"
             app:boxCornerRadiusBottomStart="6dp"
             app:boxCornerRadiusTopEnd="6dp"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:startIconTint="@color/enable"
             app:boxCornerRadiusTopStart="6dp"
-            app:endIconDrawable="@drawable/ic_baseline_email_24"
+            app:hintEnabled="false"
+            app:hintAnimationEnabled="false"
             app:errorEnabled="true"
             app:errorTextColor="@color/enable"
             app:layout_constraintTop_toBottomOf="@id/lop">
@@ -73,6 +76,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_et"
                 android:layout_width="match_parent"
+                android:hint="Enter Email"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -100,6 +104,8 @@
             app:boxCornerRadiusBottomEnd="6dp"
             app:boxCornerRadiusBottomStart="6dp"
             app:boxCornerRadiusTopEnd="6dp"
+            app:hintEnabled="false"
+            app:hintAnimationEnabled="false"
             app:boxCornerRadiusTopStart="6dp"
             app:errorEnabled="true"
             app:errorTextColor="@color/enable"
@@ -111,6 +117,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/psw_et"
                 android:layout_width="match_parent"
+                android:hint="Password"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,6 +145,8 @@
             app:boxCornerRadiusTopEnd="6dp"
             app:boxCornerRadiusTopStart="6dp"
             app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:hintAnimationEnabled="false"
             app:errorTextColor="@color/enable"
             app:layout_constraintTop_toBottomOf="@id/confirm_psw"
             app:passwordToggleEnabled="true"
@@ -147,6 +156,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirm_psw_et"
                 android:layout_width="match_parent"
+                android:hint="Confirm Password"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -176,7 +186,7 @@
             android:text="Already got an account?"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/signup"
+            android:layout_marginStart="52dp"
             app:layout_constraintStart_toStartOf="@id/signup"
             app:layout_constraintTop_toBottomOf="@id/signup" />
 
@@ -193,6 +203,20 @@
             app:layout_constraintBottom_toBottomOf="@id/already"
             app:layout_constraintStart_toEndOf="@id/already"
             app:layout_constraintTop_toTopOf="@id/already" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/loading"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_repeatMode="restart"/>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

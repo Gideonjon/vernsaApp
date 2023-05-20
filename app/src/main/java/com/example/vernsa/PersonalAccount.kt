@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.vernsa.databinding.FragmentPersonalAccountBinding
 
@@ -30,15 +31,24 @@ class PersonalAccount : Fragment() {
 
         binding.signup.setOnClickListener {
 
+            if (binding.pswEt.text.toString().isEmpty() && binding.emailEt.text.toString().isEmpty() && binding.confirmPswEt.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Fields Cant Be Empty", Toast.LENGTH_SHORT).show()
+            }
+
+
             if (binding.pswEt.text.toString().isEmpty()) {
                 binding.password.error = "This Field Cant Be Empty"
+                binding.password.requestFocus()
             }
             if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
                 binding.email.error = "Wrong Email Address"
+                binding.email.requestFocus()
             }
-            if (binding.confirmPswEt.text.toString().isEmpty() == binding.pswEt.text.toString().isEmpty()){
+            if (!binding.confirmPswEt.text.toString().equals(binding.emailEt.text.toString())){
                 binding.confirmPassword.error = "Password Doesn't Match"
+                binding.confirmPassword.requestFocus()
            } else {
+               binding.lottie.visibility = View.VISIBLE
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
             }

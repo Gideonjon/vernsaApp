@@ -4,9 +4,9 @@ package com.example.vernsa.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
@@ -17,19 +17,20 @@ import java.lang.String;
 
 public final class FragmentViewpagerBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final ViewPager2 viewpager;
 
-  private FragmentViewpagerBinding(@NonNull ScrollView rootView, @NonNull ViewPager2 viewpager) {
+  private FragmentViewpagerBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ViewPager2 viewpager) {
     this.rootView = rootView;
     this.viewpager = viewpager;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -60,7 +61,7 @@ public final class FragmentViewpagerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentViewpagerBinding((ScrollView) rootView, viewpager);
+      return new FragmentViewpagerBinding((ConstraintLayout) rootView, viewpager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

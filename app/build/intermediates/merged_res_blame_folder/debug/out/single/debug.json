@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_online.png.flat",
-        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\online.png"
-    },
-    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_atm_card.png.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\atm_card.png"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_online.png.flat",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\online.png"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\xml_backup_rules.xml.flat",
@@ -108,12 +108,12 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-debug-52:\\drawable\\ic_loggor.xml"
     },
     {
-        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable-xhdpi_ic_sharp_people_alt_24.png.flat",
-        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-pngs-46:\\drawable-xhdpi\\ic_sharp_people_alt_24.png"
-    },
-    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_outline_attach_money_24.xml.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\ic_outline_attach_money_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable-xhdpi_ic_sharp_people_alt_24.png.flat",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-pngs-46:\\drawable-xhdpi\\ic_sharp_people_alt_24.png"
     },
     {
         "merged": "com.example.vernsa.app-merged_res-51:/navigation_vernsa.xml.flat",
@@ -124,6 +124,10 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\vernabout.png"
     },
     {
+        "merged": "com.example.vernsa.app-merged_res-51:/raw_loading.json.flat",
+        "source": "com.example.vernsa.app-main-53:/raw/loading.json"
+    },
+    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_luxury.png.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\luxury.png"
     },
@@ -132,12 +136,12 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\navigation\\vernsa.xml"
     },
     {
-        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\layout_fragment_viewpager.xml.flat",
-        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_viewpager.xml"
-    },
-    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_photo.jpg.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\photo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\layout_fragment_viewpager.xml.flat",
+        "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_viewpager.xml"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_vernsa_fill.png.flat",
@@ -146,6 +150,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_seen.png.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\seen.png"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/drawable_home.png.flat",
+        "source": "com.example.vernsa.app-main-53:/drawable/home.png"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_outline_mode_edit_24.xml.flat",
@@ -158,6 +166,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_baseline_arrow_back.xml.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\ic_baseline_arrow_back.xml"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/layout_fragment_personal_account.xml.flat",
+        "source": "com.example.vernsa.app-main-53:/layout/fragment_personal_account.xml"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_combo.xml.flat",
@@ -208,6 +220,10 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\pie_chart.png"
     },
     {
+        "merged": "com.example.vernsa.app-merged_res-51:/layout_fragment_dashboard.xml.flat",
+        "source": "com.example.vernsa.app-main-53:/layout/fragment_dashboard.xml"
+    },
+    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable-mdpi_ic_sharp_people_alt_24.png.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-pngs-46:\\drawable-mdpi\\ic_sharp_people_alt_24.png"
     },
@@ -252,6 +268,10 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\okay.xml"
     },
     {
+        "merged": "com.example.vernsa.app-merged_res-51:/drawable_money_change.png.flat",
+        "source": "com.example.vernsa.app-main-53:/drawable/money_change.png"
+    },
+    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\mipmap-anydpi-v26_ic_loggo.xml.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-debug-52:\\mipmap-anydpi-v26\\ic_loggo.xml"
     },
@@ -278,6 +298,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\font_poppins_bold.ttf.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\font\\poppins_bold.ttf"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/drawable_wallet.png.flat",
+        "source": "com.example.vernsa.app-main-53:/drawable/wallet.png"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_baseline_settings_24.xml.flat",
@@ -324,6 +348,10 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\me.jpg"
     },
     {
+        "merged": "com.example.vernsa.app-merged_res-51:/menu_vernsa.xml.flat",
+        "source": "com.example.vernsa.app-main-53:/menu/vernsa.xml"
+    },
+    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_photo_send.jpg.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\photo_send.jpg"
     },
@@ -334,6 +362,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_outline_add_circle_outline_24.xml.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\ic_outline_add_circle_outline_24.xml"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/drawable_trade.png.flat",
+        "source": "com.example.vernsa.app-main-53:/drawable/trade.png"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_ic_loggo_background.xml.flat",
@@ -404,8 +436,16 @@
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "com.example.vernsa.app-merged_res-51:/layout_fragment_forgot_password.xml.flat",
+        "source": "com.example.vernsa.app-main-53:/layout/fragment_forgot_password.xml"
+    },
+    {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\layout_fragment_flutter_wave.xml.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\layout\\fragment_flutter_wave.xml"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/drawable_chart.png.flat",
+        "source": "com.example.vernsa.app-main-53:/drawable/chart.png"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\font_poppins_light.ttf.flat",
@@ -418,6 +458,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\font_spacegrotesk_light.otf.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\font\\spacegrotesk_light.otf"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/raw_camp.json.flat",
+        "source": "com.example.vernsa.app-main-53:/raw/camp.json"
     },
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\font_poppins_semibold.ttf.flat",
@@ -438,6 +482,10 @@
     {
         "merged": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-merged_res-51:\\drawable_transparent.png.flat",
         "source": "C:\\Users\\develop\\.gradle\\daemon\\7.4\\com.example.vernsa.app-main-53:\\drawable\\transparent.png"
+    },
+    {
+        "merged": "com.example.vernsa.app-merged_res-51:/layout_fragment_viewpager.xml.flat",
+        "source": "com.example.vernsa.app-main-53:/layout/fragment_viewpager.xml"
     },
     {
         "merged": "com.example.vernsa.app-merged_res-51:/layout_fragment_login_page.xml.flat",
