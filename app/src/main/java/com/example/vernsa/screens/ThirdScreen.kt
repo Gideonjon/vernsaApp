@@ -28,19 +28,9 @@ class ThirdScreen : Fragment() {
         val view = binding.root
 
 
-        binding.btnContinue.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_viewpager2_to_landingPage)
-            checkingScreen()
-        }
         return view
     }
 
-    private fun checkingScreen() {
-        val sharedPref = requireActivity().getSharedPreferences("vernsa", Context.MODE_PRIVATE)
-        val editor = sharedPref.edit()
-        editor.putBoolean("Finished",true)
-        editor.apply()
 
-    }
 
 }

@@ -26,7 +26,7 @@ class LoginPage : Fragment() {
         val view = binding.root
 
         binding.signupHere.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_personalAccount)
+            Navigation.findNavController(view).navigate(R.id.action_loginPage2_to_personalAccount2)
         }
 
 
@@ -38,7 +38,6 @@ class LoginPage : Fragment() {
             if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
                binding.email.error = "Enter A Valid Email"
             } else {
-                binding.lottie.visibility = View.VISIBLE
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
 
@@ -47,7 +46,9 @@ class LoginPage : Fragment() {
 
         }
         binding.forgotPsw.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_loginPage_to_forgotPassword)
+
+            Navigation.findNavController(view).navigate(R.id.action_loginPage2_to_forgotPassword)
+
         }
 
 

@@ -1,10 +1,12 @@
 package com.example.vernsa.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.vernsa.R
 import com.example.vernsa.databinding.FragmentViewpagerBinding
 import com.example.vernsa.screens.FirstScreen
@@ -30,19 +32,31 @@ class viewpager : Fragment() {
             SecondScreen(),
             ThirdScreen()
         )
-        val viewpager = binding.viewpager
-        val adapter2 =
-            viewpagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
-        viewpager.adapter = adapter2
+
+        binding.getStarted.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_viewpager2_to_landingPage2)
+
+            checkingScreen()
+
+        }
+
 
         val adapter = viewpagerAdapter(
             fragmentList,
             requireActivity().supportFragmentManager, lifecycle
         )
         binding.viewpager.adapter = adapter
+        binding.springDotsIndicator.attachTo(binding.viewpager)
 
         return view
     }
 
+    private fun checkingScreen() {
+        val sharedPref = requireActivity().getSharedPreferences("vernsa", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
+
+    }
 
 }

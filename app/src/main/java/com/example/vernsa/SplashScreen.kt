@@ -26,7 +26,7 @@ class SplashScreen : Fragment() {
 
         Handler().postDelayed({
             if (onboarding()) {
-                Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_landingPage)
+                Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_landingPage2)
             } else {
                 Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_viewpager2)
             }

@@ -22,11 +22,15 @@ class LandingPage : Fragment() {
         val view = binding.root
 
         binding.login.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_landingPage_to_loginPage)
+
+            Navigation.findNavController(view).navigate(R.id.action_landingPage2_to_loginPage2)
+
         }
+
         binding.signUp.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_landingPage_to_personalAccount)
+            Navigation.findNavController(view).navigate(R.id.action_landingPage2_to_personalAccount2)
         }
+
 
         return view
     }

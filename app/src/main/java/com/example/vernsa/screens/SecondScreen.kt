@@ -24,6 +24,8 @@ class SecondScreen : Fragment() {
         val view = binding.root
 
 
+
+
         return view
     }
 

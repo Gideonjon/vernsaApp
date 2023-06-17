@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idan"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.vernsa.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_viewpager2"
+            app:destination="@id/viewpager2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_landingPage2"
+            app:destination="@id/landingPage2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewpager2"
+        android:name="com.example.vernsa.onboarding.viewpager"
+        android:label="fragment_viewpager"
+        tools:layout="@layout/fragment_viewpager" >
+        <action
+            android:id="@+id/action_viewpager2_to_landingPage2"
+            app:destination="@id/landingPage2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/landingPage2"
+        android:name="com.example.vernsa.LandingPage"
+        android:label="LandingPage" >
+        <action
+            android:id="@+id/action_landingPage2_to_personalAccount2"
+            app:destination="@id/personalAccount2" />
+        <action
+            android:id="@+id/action_landingPage2_to_loginPage2"
+            app:destination="@id/loginPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPage2"
+        android:name="com.example.vernsa.LoginPage"
+        android:label="LoginPage" >
+        <action
+            android:id="@+id/action_loginPage2_to_personalAccount2"
+            app:destination="@id/personalAccount2" />
+        <action
+            android:id="@+id/action_loginPage2_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalAccount2"
+        android:name="com.example.vernsa.PersonalAccount"
+        android:label="PersonalAccount" >
+        <action
+            android:id="@+id/action_personalAccount2_to_loginPage2"
+            app:destination="@id/loginPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.example.vernsa.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPassword_to_verifyPassword"
+            app:destination="@id/verifyPassword" />
+        <action
+            android:id="@+id/action_forgotPassword_to_loginPage2"
+            app:destination="@id/loginPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyPassword"
+        android:name="com.example.vernsa.VerifyPassword"
+        android:label="fragment_verify_password"
+        tools:layout="@layout/fragment_verify_password" />
+</navigation>

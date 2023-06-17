@@ -26,12 +26,14 @@ class PersonalAccount : Fragment() {
         val view = binding.root
 
         binding.loginHere.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_personalAccount_to_loginPage)
+            Navigation.findNavController(view).navigate(R.id.action_personalAccount2_to_loginPage2)
         }
 
         binding.signup.setOnClickListener {
 
-            if (binding.pswEt.text.toString().isEmpty() && binding.emailEt.text.toString().isEmpty() && binding.confirmPswEt.text.toString().isEmpty()){
+            if (binding.pswEt.text.toString().isEmpty() && binding.emailEt.text.toString()
+                    .isEmpty() && binding.confirmPswEt.text.toString().isEmpty()
+            ) {
                 Toast.makeText(requireContext(), "Fields Cant Be Empty", Toast.LENGTH_SHORT).show()
             }
 
@@ -44,11 +46,10 @@ class PersonalAccount : Fragment() {
                 binding.email.error = "Wrong Email Address"
                 binding.email.requestFocus()
             }
-            if (!binding.confirmPswEt.text.toString().equals(binding.emailEt.text.toString())){
+            if (!binding.confirmPswEt.text.toString().equals(binding.emailEt.text.toString())) {
                 binding.confirmPassword.error = "Password Doesn't Match"
                 binding.confirmPassword.requestFocus()
-           } else {
-               binding.lottie.visibility = View.VISIBLE
+            } else {
                 val intent = Intent(requireContext(), MainScreen::class.java)
                 activity?.startActivity(intent)
             }
@@ -56,6 +57,6 @@ class PersonalAccount : Fragment() {
 
         return view
     }
-    }
+}
 
 

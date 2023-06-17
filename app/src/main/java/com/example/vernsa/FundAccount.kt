@@ -21,7 +21,6 @@ class FundAccount : Fragment() {
     private val binding get() = _binding!!
     private var publicKey = "FLWPUBK_TEST-42e6dfe2e63c701924823774fd06c145-X"
     private var encryptionKey = "FLWSECK_TEST-bfb37eeec9f678e0f73652116dad10ec-X"
-    private var amount = 400
     private var email = "vernsa@gmail.com"
 
     override fun onCreateView(
